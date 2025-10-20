@@ -13,7 +13,7 @@ if not GOOGLE_API_KEY:
     raise ValueError("GEMINI_API_KEY غير مضبوط في متغيرات البيئة")
 
 genai.configure(api_key=GOOGLE_API_KEY)
-model = genai.GenerativeModel('gemini-pro-vision')
+model = genai.GenerativeModel('gemini-1.5-flash')
 
 @app.route('/')
 def serve_frontend():
@@ -82,3 +82,4 @@ def correct_answers():
 if __name__ == '__main__':
 
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8000)))
+

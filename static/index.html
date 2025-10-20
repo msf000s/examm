@@ -2476,7 +2476,7 @@ async function processImageWithAI(imageSrc) {
     formData.append('num_questions', document.getElementById('questionCount').value || 10);
     formData.append('options_per_q', document.getElementById('optionsCount').value || 4);
 
-    const response = await fetch('https://examm.onrender.com/api/correct', {
+    const response = await fetch('https://examm-xfzl.onrender.com/api/correct', {
         method: 'POST',
         body: formData
     });
@@ -2572,4 +2572,5 @@ function optimizeImageForProcessing(imageElement) {
 }
     </script>
 </body>
+
 </html>
